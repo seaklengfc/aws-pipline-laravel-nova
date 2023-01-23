@@ -26,6 +26,10 @@ Route::get('/health', function () {
     return "OK";
 });
 
+Route::get('/info', function () {
+    echo phpinfo();
+});
+
 // Clear application cache:
 Route::get('/clear-cache', function() {
     \Illuminate\Support\Facades\Artisan::call('cache:clear');
